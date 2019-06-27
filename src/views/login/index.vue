@@ -19,7 +19,7 @@
                 </span>
                 <el-input
                     ref="username"
-                    v-model="loginForm.account"
+                    v-model="loginForm.username"
                     placeholder="Username"
                     name="username"
                     type="text"
@@ -75,8 +75,8 @@ export default {
     name: 'Login',
     data() {
         const validateUsername = (rule, value, callback) => {
-            // if (!validUsername(value)) {
-            if (!value) {
+            if (!validUsername(value)) {
+                // if (!value) {
                 callback(new Error('Please enter the correct user name'))
             } else {
                 callback()
@@ -91,11 +91,11 @@ export default {
         }
         return {
             loginForm: {
-                account: 'admin',
+                username: 'admin',
                 password: '123456'
             },
             loginRules: {
-                account: [{ required: true, trigger: 'blur', validator: validateUsername }],
+                username: [{ required: true, trigger: 'blur', validator: validateUsername }],
                 password: [{ required: true, trigger: 'blur', validator: validatePassword }]
             },
             loading: false,
@@ -123,30 +123,16 @@ export default {
             })
         },
         handleLogin() {
-            this.$router.push({ path: '/goods' })
 
-            // var _this = this
-            // _this.$refs.loginForm.validate(valid => {
-            //     if (valid) {
-            //         _this.loading = true
-            //         _this.$store.dispatch('login', {
-            //             account: _this.loginForm.account,
-            //             password: _this.loginForm.password,
-            //             callback(err, data) {
-            //                 if (!err) {
-            //                     _this.$router.push({ path: '/' })
-            //                     _this.loading = false
-            //                 } else {
-            //                     _this.loading = false
-            //                     console.log(err)
-            //                 }
-            //             }
-            //         })
-            //     } else {
-            //         console.log('error submit!!')
-            //         return false
-            //     }
-            // })
+            this.$refs.loginForm.validate(valid => {
+                if (valid) {
+                    this.$store.dispatch('Login', this.loginForm).then(res => {
+                        console.log('----')
+                        console.log(res)
+                        this.$router.push({ path: '/dashboard' })
+                    })
+                }
+            })
         }
     },
     components: {
