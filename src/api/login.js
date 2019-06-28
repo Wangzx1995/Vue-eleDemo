@@ -25,3 +25,10 @@ export function logout() {
         method: 'post'
     })
 }
+
+export function getList() {
+    return request({
+        url: '/data/list',
+        method: 'get'
+    })
+}

@@ -127,9 +127,11 @@ export default {
             this.$refs.loginForm.validate(valid => {
                 if (valid) {
                     this.$store.dispatch('Login', this.loginForm).then(res => {
-                        console.log('----')
-                        console.log(res)
-                        this.$router.push({ path: '/dashboard' })
+                        this.$router.replace({ path: '/dashboard' })
+                        this.$message({
+                            message: '登录成功！',
+                            type: 'success'
+                        });
                     })
                 }
             })

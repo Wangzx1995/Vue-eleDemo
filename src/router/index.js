@@ -7,6 +7,11 @@ Vue.use(Router)
 export default new Router({
     routes: [{
             path: '/',
+            component: layout,
+            redirect: '/dashboard'
+        },
+        {
+            path: '/login',
             name: 'Login',
             component: () =>
                 import ('@/views/login/index'),
