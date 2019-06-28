@@ -30,7 +30,7 @@ export default {
             //         this.dataShow = res.data;
             //     })
             this.$http.get("/data/list").then(res => {
-                console.log(res);
+                // console.log(res);
                 this.msg = res.data.data
             });
 

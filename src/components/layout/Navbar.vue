@@ -9,7 +9,7 @@
             :isActive="sidebar.opened"
         ></nx-hamburger> -->
 
-        <!-- <nx-breadcrumb class="breadcrumb-container"></nx-breadcrumb> -->
+        <nx-breadcrumb class="breadcrumb-container"></nx-breadcrumb>
 
         <div class="right-menu">
 
@@ -22,6 +22,7 @@
 
             <!-- <lang-select class="international right-menu-item"></lang-select> -->
             <!-- <nx-lang-select class="international right-menu-item"></nx-lang-select> -->
+            <span class="adminName">{{name.name}}</span>
             <el-dropdown
                 class="avatar-container right-menu-item"
                 trigger="click"
@@ -29,7 +30,7 @@
                 <div class="avatar-wrapper">
                     <img
                         class="user-avatar"
-                        src="https://mgbq.github.io/nx-admin-site/home.png"
+                        src="./../../../1.gif"
                     >
                     <i class="el-icon-caret-bottom"></i>
                 </div>
@@ -54,9 +55,9 @@
 
 <script>
 // import { mapGetters } from 'vuex'
-
-// import nxBreadcrumb from '@/components/navbar/nx-breadcrumb'
-// import nxHamburger from '@/components/navbar/nx-hamburger'
+import { getToken } from '@/utils/auth'
+import nxBreadcrumb from '@/components/navbar/nx-breadcrumb'
+import nxHamburger from '@/components/navbar/nx-hamburger'
 // import nxHelp from '@/components/navbar/nx-help/index'
 
 // import nxLangSelect from '@/components/navbar/nx-lang-select/index'
@@ -64,9 +65,14 @@
 // import nxGithub from '@/components/navbar/nx-github/index'
 export default {
     name: 'navBar',
+    data() {
+        return {
+            name: JSON.parse(getToken())
+        }
+    },
     components: {
-        // nxBreadcrumb,
-        // nxHamburger,
+        nxBreadcrumb,
+        nxHamburger,
         // nxHelp,
         // nxLangSelect,
         // nxGithub
@@ -123,6 +129,11 @@ export default {
         }
         .theme-switch {
             vertical-align: 15px;
+        }
+        .adminName {
+            float: left;
+            line-height: 50px;
+            display: inline-block;
         }
         .avatar-container {
             height: 50px;

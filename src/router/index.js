@@ -69,7 +69,7 @@ export default new Router({
         {
             path: '/ccc',
             component: layout,
-            redirect: '/ccc/BaseForm',
+            redirect: '/ccc/c1',
             name: 'ccc',
             meta: {
                 title: 'ccc',
