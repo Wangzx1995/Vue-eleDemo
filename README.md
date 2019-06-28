@@ -1,10 +1,10 @@
-# vue-cart
+# vue-eleDemo
 
-> A Vue.js project
+> 汪忠孝的模板
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
