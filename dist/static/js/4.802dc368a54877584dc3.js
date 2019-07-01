@@ -1,2 +1,0 @@
-webpackJsonp([4],{O8CS:function(e,n){},dWDP:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n    c2\n")])},staticRenderFns:[]};var c=t("C7Lr")({},r,!1,function(e){t("O8CS")},null,null);n.default=c.exports}});
-//# sourceMappingURL=4.802dc368a54877584dc3.js.map
