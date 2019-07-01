@@ -3,7 +3,7 @@
         <transition name="fade">
             <span class="logo_title is-bold ">
                 <template>
-                    欢迎！
+                    欢迎汪某！
                 </template>
             </span>
         </transition>
