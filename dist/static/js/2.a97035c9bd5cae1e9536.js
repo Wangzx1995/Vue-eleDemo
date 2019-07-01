@@ -1,0 +1,2 @@
+webpackJsonp([2],{A70P:function(e,n){},ZzX6:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n    baseform\n\n")])},staticRenderFns:[]};var s=t("C7Lr")({},r,!1,function(e){t("A70P")},null,null);n.default=s.exports}});
+//# sourceMappingURL=2.a97035c9bd5cae1e9536.js.map
