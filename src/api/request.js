@@ -28,7 +28,7 @@ service.interceptors.response.use(
         /**
          * code为非20000是抛错 可结合自己业务进行修改
          */
-        console.log(response.data)
+        // console.log(response.data)
         const res = response.data
         if (res.code !== 0) {
             Message({
