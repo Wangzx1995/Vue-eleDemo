@@ -17,9 +17,7 @@ export default {
         }
     },
     mounted() {
-        console.log('-----------')
         this.getdata()
-
     },
     methods: {
         getdata() {

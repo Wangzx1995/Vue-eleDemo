@@ -45,16 +45,15 @@
                     v-for="child in item.children"
                     v-if="!child.hidden"
                 >
-                    <sidebar-item
+                    <!-- <sidebar-item
                         :is-nest="true"
                         class="nest-menu"
                         v-if="child.children&&child.children.length>0"
                         :routes="[child]"
                         :key="child.path"
-                    ></sidebar-item>
+                    ></sidebar-item> -->
 
                     <router-link
-                        v-else
                         :to="item.path+'/'+child.path"
                         :key="child.name"
                     >
@@ -79,7 +78,7 @@
 <script>
 // import { generateTitle } from '@/utils/i18n'
 export default {
-    name: 'SidebarItem',
+    // name: 'SidebarItem',
     props: {
         // routes: {
         //     type: Array
